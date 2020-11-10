@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookGUI.Services
 {
-    interface IReviewRepositoryGUI
+    public interface IReviewRepositoryGUI
     {
         IEnumerable<ReviewDto> GetAllReviews();
         ReviewDto GetReviewById(int reviewId);

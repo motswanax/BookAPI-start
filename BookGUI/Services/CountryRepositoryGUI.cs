@@ -22,6 +22,20 @@ namespace BookGUI.Services
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri("http://localhost:60039/api/");
+
+                Task<HttpResponseMessage> response = client.GetAsync("countries");
+                response.Wait();
+
+                var result = response.Result;
+
+                // Verify result.
+                if (result.IsSuccessStatusCode)
+                {
+                    Task<List<CountryDto>> readTask = result.Content.ReadAsAsync<List<CountryDto>>();
+                    readTask.Wait();
+
+                    countries = readTask.Result;
+                }
             }
 
             return countries;

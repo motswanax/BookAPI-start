@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookGUI.Services
 {
-    interface IAuthorRepositoryGUI
+    public interface IAuthorRepositoryGUI
     {
         IEnumerable<AuthorDto> GetAllAuthors();
         AuthorDto GetAuthorById(int authorId);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookGUI.Services
 {
-    interface ICountryRepositoryGUI
+    public interface ICountryRepositoryGUI
     {
         IEnumerable<CountryDto> GetCountries();
         CountryDto GetCountryById(int countryId);

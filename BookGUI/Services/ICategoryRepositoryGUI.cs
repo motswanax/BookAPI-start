@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookGUI.Services
 {
-    interface ICategoryRepositoryGUI
+    public interface ICategoryRepositoryGUI
     {
         CategoryDto GetCategoryById(int categoryId);
         IEnumerable<CategoryDto> GetAllCategories();
